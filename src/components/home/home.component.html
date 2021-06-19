@@ -1,0 +1,79 @@
+<div class="wrapper" [ngClass]="overlay ? 'overlay' : ''">
+	<aside>
+		<div class="mb-5 text-center">
+			<a href="#">R</a>
+		</div>
+
+		<ul class="nav flex-column">
+			<li class="nav-item">
+				<a [routerLink]="['/dashboard']" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+					<i class="fa fa-users" aria-hidden="true"></i>
+					<span class="px-2">Patient List</span>
+				</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" routerLink="add" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+					<i class="fa fa-user"></i>
+					<span class="px-2">Register Patient</span>
+				</a>
+			</li>
+		</ul>
+
+
+		<div style="position: absolute; bottom: 16px; width: 100%; left: 0;">
+			<hr class="bg-white">
+			<ul class="nav flex-column" style="padding-left: 24px; padding-right: 24px;">
+
+				<p class="text-center mb-4">
+					{{user?.name}}
+				</p>
+
+				<li class="nav-item">
+					<a href="#" class="nav-link active">
+						<i class="fa fa-power-off" aria-hidden="true"></i>
+						<span class="px-3">Logout</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</aside>
+
+	<div class="main">
+		<nav class="navbar navbar-light bg-white shadow-sm py-md-2">
+			<div class="px-2 w-100">
+				<a class="menu px-3 d-inline-block d-md-none" (click)="toggle()" href="#">
+					<i class="fa fa-bars" style="font-size: 24px;" aria-hidden="true"></i>
+				</a>
+				<div class="px-2 d-sm-none d-md-inline-block">
+					<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+					<i class="fa fa-search"></i>
+				</div>
+				
+				<ul class="nav">
+					<li class="nav-item d-inline-block d-md-none">
+						<a href="#" class="nav-link">
+							<i class="fa fa-search"></i>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="#" class="nav-link box">
+							<!-- <img src="/assets/login.jpg"> -->
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="#" class="nav-link box">
+							<!-- <img src="/assets/login.jpg"> -->
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<main class="p-4">
+			<router-outlet></router-outlet>
+		</main>
+	</div>
+</div>

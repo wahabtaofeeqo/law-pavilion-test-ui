@@ -1,0 +1,206 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Wahab Taofeeq",
+      "gender": "male",
+      "phone": "+234 (0) 813409858",
+      "email": "tao@yahoo.com",
+      "password": "domain",
+      "address": "4517 Washington Ave...",
+      "profile": "user.png"
+    },
+    {
+      "id": 1,
+      "name": "Wahab Domain",
+      "gender": "male",
+      "phone": "+234 (0) 813409858",
+      "email": "tao@yahoo.com",
+      "password": "domain",
+      "address": "4517 Washington Ave...",
+      "profile": "user1.png"
+    },
+    {
+      "id": 1,
+      "name": "Wahab Domain",
+      "gender": "male",
+      "phone": "+234 (0) 813409858",
+      "email": "tao@yahoo.com",
+      "password": "domain",
+      "address": "4517 Washington Ave...",
+      "profile": "user1.png"
+    },
+    {
+      "id": 1,
+      "name": "Wahab Domain",
+      "gender": "male",
+      "phone": "+234 (0) 813409858",
+      "email": "tao@yahoo.com",
+      "password": "domain",
+      "address": "4517 Washington Ave...",
+      "profile": "user1.png"
+    },
+    {
+      "id": 1,
+      "name": "Wahab Domain",
+      "gender": "male",
+      "phone": "+234 (0) 813409858",
+      "email": "tao@yahoo.com",
+      "password": "domain",
+      "address": "4517 Washington Ave...",
+      "profile": "user1.png"
+    },
+    {
+      "id": 1,
+      "name": "Wahab Domain",
+      "gender": "male",
+      "phone": "+234 (0) 813409858",
+      "email": "tao@yahoo.com",
+      "password": "domain",
+      "address": "4517 Washington Ave...",
+      "profile": "user1.png"
+    },
+    {
+      "id": 1,
+      "name": "Wahab Domain",
+      "gender": "male",
+      "phone": "+234 (0) 813409858",
+      "email": "tao@yahoo.com",
+      "password": "domain",
+      "address": "4517 Washington Ave...",
+      "profile": "user1.png"
+    },
+    {
+      "id": 1,
+      "name": "Wahab Domain",
+      "gender": "male",
+      "phone": "+234 (0) 813409858",
+      "email": "tao@yahoo.com",
+      "password": "domain",
+      "address": "4517 Washington Ave...",
+      "profile": "user.png"
+    },
+    {
+      "id": 1,
+      "name": "Wahab Domain",
+      "gender": "male",
+      "phone": "+234 (0) 813409858",
+      "email": "tao@yahoo.com",
+      "password": "domain",
+      "address": "4517 Washington Ave...",
+      "profile": "user1.png"
+    },
+    {
+      "id": 1,
+      "name": "Wahab Domain",
+      "gender": "male",
+      "phone": "+234 (0) 813409858",
+      "email": "tao@yahoo.com",
+      "password": "domain",
+      "address": "4517 Washington Ave...",
+      "profile": "user.png"
+    },
+    {
+      "id": 1,
+      "name": "Wahab Domain",
+      "gender": "male",
+      "phone": "+234 (0) 813409858",
+      "email": "tao@yahoo.com",
+      "password": "domain",
+      "address": "4517 Washington Ave...",
+      "profile": "user1.png"
+    },
+    {
+      "id": 1,
+      "name": "Wahab Domain",
+      "gender": "male",
+      "phone": "+234 (0) 813409858",
+      "email": "tao@yahoo.com",
+      "password": "domain",
+      "address": "4517 Washington Ave...",
+      "profile": "user1.png"
+    },
+    {
+      "id": 1,
+      "name": "Wahab Domain",
+      "gender": "male",
+      "phone": "+234 (0) 813409858",
+      "email": "tao@yahoo.com",
+      "password": "domain",
+      "address": "4517 Washington Ave...",
+      "profile": "user.png"
+    }
+  ],
+  "patients": [
+    {
+      "personal": {
+        "title": "mr",
+        "surname": "Tao",
+        "firstname": "Boss",
+        "middlename": "Domain",
+        "phone": "09092828822",
+        "email": "tao@yahoo.com",
+        "gender": "male",
+        "dob": "2021-06-10",
+        "address": "Home"
+      },
+      "other": {
+        "ethnicity": "a",
+        "religion": "a",
+        "status": "a",
+        "occupation": "Work",
+        "bgroup": "O",
+        "type": "Good",
+        "nationality": "a",
+        "state": "a",
+        "local": "a",
+        "sor": "a"
+      },
+      "nok": {
+        "fullname": "Domain",
+        "relationship": "a",
+        "phone": "090",
+        "address": "Ada"
+      },
+      "hmo": {
+        "billing": "a"
+      },
+      "id": 1
+    },
+    {
+      "personal": {
+        "title": "mrs",
+        "surname": "Feeq",
+        "firstname": "Iay",
+        "middlename": "low",
+        "phone": "09092828822",
+        "email": "tao@yahoo.com",
+        "gender": "female",
+        "dob": "2021-06-02",
+        "address": "Home"
+      },
+      "other": {
+        "ethnicity": "b",
+        "religion": "b",
+        "status": "b",
+        "occupation": "Oka",
+        "bgroup": "O",
+        "type": "Good",
+        "nationality": "a",
+        "state": "b",
+        "local": "b",
+        "sor": "b"
+      },
+      "nok": {
+        "fullname": "Domain",
+        "relationship": "b",
+        "phone": "090",
+        "address": "G"
+      },
+      "hmo": {
+        "billing": "b"
+      },
+      "id": 2
+    }
+  ]
+}

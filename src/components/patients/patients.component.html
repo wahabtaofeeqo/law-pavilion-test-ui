@@ -1,0 +1,47 @@
+<div class="h-100 container-fluid p-4">
+	<h4 class="text-color h3 font-weight-bold">Patient List</h4>
+
+	<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100">
+
+		<ng-container matColumnDef="Profile">
+			<th mat-header-cell *matHeaderCellDef></th>
+			<td mat-cell *matCellDef = "let element">
+				<img [src]="'assets/' + element.profile" class="rounded-circle" style="width: 40px; height: 40px;">
+			</td>
+		</ng-container>
+
+	   <ng-container matColumnDef = "Name">
+	      <th mat-header-cell *matHeaderCellDef>NAME</th>
+	      <td mat-cell *matCellDef = "let element"> {{element.name}} </td>
+	   </ng-container>
+	   <ng-container matColumnDef = "Gender">
+	      <th mat-header-cell *matHeaderCellDef>GENDER</th>
+	      <td mat-cell *matCellDef = "let element">
+	      	<button class="btn btn-light btn-sm text-muted">{{element.gender}}</button>
+	      </td>
+	   </ng-container>
+	   	<ng-container matColumnDef = "Age">
+	      	<th mat-header-cell *matHeaderCellDef>AGE</th>
+	      	<td mat-cell *matCellDef = "let element"> {{element.age}} </td>
+	   	</ng-container>
+	   	<ng-container matColumnDef = "Phone">
+	      	<th mat-header-cell *matHeaderCellDef>PHONE NUMBER</th>
+	      	<td mat-cell *matCellDef = "let element"> {{element.phone}} </td>
+	   	</ng-container>
+
+	   	<ng-container matColumnDef = "Address">
+	      	<th mat-header-cell *matHeaderCellDef>ADDRESS</th>
+	      	<td mat-cell *matCellDef = "let element"> {{element.address}} </td>
+	   	</ng-container>
+
+	   	<ng-container matColumnDef="Action">
+			<th mat-header-cell *matHeaderCellDef></th>
+			<td mat-cell *matCellDef = "let element">
+				<a href="#" class="btn btn-sm btn-profile px-3">View Profile</a>
+			</td>
+		</ng-container>
+
+	   <tr mat-header-row *matHeaderRowDef = "displayedColumns" class="bg-light"></tr>
+	   <tr mat-row *matRowDef = "let row; columns: displayedColumns;"></tr>
+	</table>
+</div>

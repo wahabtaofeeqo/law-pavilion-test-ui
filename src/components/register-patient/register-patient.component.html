@@ -1,0 +1,238 @@
+<div class="wrapper h-100">
+	 <mat-horizontal-stepper labelPosition="bottom" linear="true" #stepper class="container h-100">
+
+        <mat-step [stepControl]="personalDataGroup">
+            <form [formGroup]="personalDataGroup">
+            	<ng-template matStepLabel>
+            		Personal Details
+            	</ng-template>
+		        
+		        <div class="row py-md-4">
+		        	<div class="col-md-3">
+		        		<div>
+		        			<p class="text-center">
+		        				Drag and Drop Images here <br> OR
+		        			</p>
+		        			<ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" 
+						    (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+						        <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+						          	<p>
+						          		<button type="button" class="btn btn-primary shadow-sm" (click)="openFileSelector()">
+						          			Upload Picture
+						          		</button>
+						          	</p>
+						        </ng-template>
+						    </ngx-file-drop>
+		        		</div>
+		        	</div>
+
+		        	<div class="col-md-8">
+		        		<div class="row">
+		        			<mat-form-field class="col-5" appearance="outline">
+		        				<select matNativeControl required formControlName="title">
+								    <option value="">Select Title</option>
+								    <option value="mr">Mr</option>
+								    <option value="mrs">Mrs</option>
+								  </select>
+		        			</mat-form-field>
+
+		        			<mat-form-field class="col-6" appearance="outline">
+		        				<input matInput placeholder = "Patient Surname" formControlName="surname" required>
+		        			</mat-form-field>
+		        		</div>
+
+		        		<div class="row">
+		        			<mat-form-field class="col-6" appearance="outline">
+		        				<input matInput placeholder="Patient Firstname" formControlName="firstname" required>
+		        			</mat-form-field>
+
+		        			<mat-form-field class="col-6" appearance="outline">
+		        				<input matInput placeholder="Patient Middle Name" formControlName="middlename" required>
+		        			</mat-form-field>
+		        		</div>
+
+		        		<div class="row">
+		        			<mat-form-field class="col-6" appearance="outline">
+		        				<input matInput placeholder="Patient Phone Number" formControlName="phone" required>
+		        			</mat-form-field>
+
+		        			<mat-form-field class="col-6" appearance="outline">
+		        				<input matInput placeholder="Patient Email" formControlName="email" type="email" required>
+		        			</mat-form-field>
+		        		</div>
+
+		        		<div class="row">
+		        			<mat-form-field class="col-3" appearance="outline">
+		        				<select matNativeControl required formControlName="gender">
+								    <option value="">Gender</option>
+								    <option value="male">Male</option>
+								    <option value="female">Female</option>
+								  </select>
+		        			</mat-form-field>
+
+		        			<mat-form-field class="col-4" appearance="outline">
+		        				<input type="date" matInput placeholder="Date of birth" formControlName="dob" required>
+		        			</mat-form-field>
+		        		</div>
+
+		        		<div class="row">
+		        			<mat-form-field class="col-md-10" appearance="outline">
+		        				<textarea matInput placeholder="Address" rows="5" formControlName="address"></textarea>
+		        			</mat-form-field>
+		        		</div>
+		        	</div>
+		        </div>
+
+		     
+		        <div class="container" style="text-align: right;">
+		            <button class="btn py-md-2 btn-primary px-5" mat-button matStepperNext>Continue</button>
+		        </div>
+            </form>
+        </mat-step>
+
+
+        <mat-step [stepControl]="otherDataGroup">
+            <form [formGroup]="otherDataGroup" class="py-md-4">
+            	<ng-template matStepLabel>Other</ng-template>
+		        
+		        <div class="row">
+		         	<mat-form-field class="col-md-2" appearance="outline">
+		        		<select matNativeControl required formControlName="ethnicity">
+							<option value="">Ethnicity</option>
+							<option value="a">A</option>
+							<option value="b">B</option>
+						</select>
+		        	</mat-form-field>
+
+		        	<mat-form-field class="col-md-2" appearance="outline">
+		        		<select matNativeControl required formControlName="religion">
+							<option value="">Religion</option>
+							<option value="a">A</option>
+							<option value="b">B</option>
+						</select>
+		        	</mat-form-field>
+
+		        	<mat-form-field class="col-md-2" appearance="outline">
+		        		<select matNativeControl required formControlName="status">
+							<option value="">Marital Status</option>
+							<option value="a">A</option>
+							<option value="b">B</option>
+						</select>
+		        	</mat-form-field>
+
+		        	<mat-form-field class="col-md-6" appearance="outline">
+		        		<input type="text" formControlName="occupation" matInput placeholder="Occupation">
+		        	</mat-form-field>
+		         </div>
+
+		        <div class="row">
+		         	<mat-form-field class="col-md-3" appearance="outline">
+		        		<input type="text" formControlName="bgroup" matInput placeholder="Blood Group">
+		        	</mat-form-field>
+
+		        	<mat-form-field class="col-md-3" appearance="outline">
+		        		<input type="text" formControlName="type" matInput placeholder="Patient Type">
+		        	</mat-form-field>
+
+		        	<mat-form-field class="col-md-3" appearance="outline">
+		        		<select matNativeControl required formControlName="nationality">
+							<option value="">Nationality</option>
+							<option value="a">A</option>
+							<option value="b">B</option>
+						</select>
+		        	</mat-form-field>
+
+		        	<mat-form-field class="col-md-3" appearance="outline">
+		        		<select matNativeControl required formControlName="state">
+							<option value="">Marital Status</option>
+							<option value="a">A</option>
+							<option value="b">B</option>
+						</select>
+		        	</mat-form-field>
+		        </div>
+
+		        <div class="row">
+		         
+		        	<mat-form-field class="col-md-3" appearance="outline">
+		        		<select matNativeControl required formControlName="local">
+							<option value="">Local Government</option>
+							<option value="a">A</option>
+							<option value="b">B</option>
+						</select>
+		        	</mat-form-field>
+
+		        	<mat-form-field class="col-md-3" appearance="outline">
+		        		<select matNativeControl required formControlName="sor">
+							<option value="">State of Resident</option>
+							<option value="a">A</option>
+							<option value="b">B</option>
+						</select>
+		        	</mat-form-field>
+		        </div>
+		         
+		        <div class="container" style="text-align: right;">
+		           <button class="btn py-md-2 btn-light px-5 mx-4" mat-button matStepperPrevious>Back</button>
+		            <button class="btn py-md-2 btn-primary px-5" mat-button matStepperNext>Continue</button>
+		        </div>
+            </form>
+        </mat-step>
+
+
+        <mat-step [stepControl]="nokDataGroup">
+            <form [formGroup]="nokDataGroup">
+            	<ng-template matStepLabel>Next of Kin</ng-template>
+
+            	<div class="h-100 py-md-4">
+            		<div class="row">
+            			<mat-form-field class="col-md-4" appearance="outline">
+			        		<input type="text" formControlName="fullname" matInput placeholder="Fullname">
+			        	</mat-form-field>
+
+			        	<mat-form-field class="col-md-4" appearance="outline">
+			        		<select matNativeControl required formControlName="relationship">
+								<option value="">Relationship</option>
+								<option value="a">A</option>
+								<option value="b">B</option>
+							</select>
+			        	</mat-form-field>
+
+			        	<mat-form-field class="col-md-4" appearance="outline">
+			        		<input type="text" formControlName="phone" matInput placeholder="Phone Number">
+			        	</mat-form-field>
+			        </div>
+
+			        <div class="row">
+			        	<mat-form-field class="col-md-6" appearance="outline">
+			        		<textarea formControlName="address" matInput placeholder="Patient Type"></textarea>
+			        	</mat-form-field>
+			        </div>
+            	</div>
+
+            	<div class="container" style="text-align: right;">
+		           	<button class="btn py-md-2 btn-light px-5 mx-4" mat-button matStepperPrevious>Back</button>
+		            <button class="btn py-md-2 btn-primary px-5" mat-button matStepperNext>Continue</button>
+		        </div>
+            </form>
+        </mat-step>
+
+        <mat-step [stepControl]="hmoDataGroup">
+            <form [formGroup]="hmoDataGroup" (ngSubmit)="addPatient()">
+            	<ng-template matStepLabel>HMO</ng-template>
+
+		        <mat-form-field class="col-md-4" appearance="outline">
+			        <select matNativeControl required formControlName="billing">
+						<option value="">Sponor Billing Policy</option>
+						<option value="a">A</option>
+						<option value="b">B</option>
+					</select>
+			    </mat-form-field>
+		         
+		        <div class="container" style="text-align: right;">
+		           	<button class="btn py-md-2 btn-light px-5 mx-4" mat-button matStepperPrevious>Back</button>
+		            <button class="btn py-md-2 btn-primary px-5" mat-button matStepperNext>Continue</button>
+		        </div>
+            </form>
+        </mat-step>
+
+    </mat-horizontal-stepper>
+</div>

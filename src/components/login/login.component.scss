@@ -1,0 +1,46 @@
+$color: #102352;
+
+.bg-left {
+	background: url('/assets/bg.png');
+}
+
+.left {
+	background: linear-gradient(158.97deg, rgba(236, 234, 234, 0.4) 0.95%, rgba(255, 255, 255, 0) 99.15%);
+}
+
+.ellipse {
+	background-image: url('/assets/ellipse2.png');
+	width: 300px;
+	height: 401.9px;
+	background: #FAFBFB;
+	opacity: 0.6;
+	box-shadow: 0px 0px 111.753px 10.8649px rgba(4, 25, 77, 0.09);
+}
+
+.text-color {
+	color: $color;
+}
+
+.login-heading {
+
+	color: $color;
+	font-size: 35px;
+	font-weight: bolder;
+	line-height: 1.2;
+
+	div {
+		position: relative;
+
+		span {
+			display: flex; 
+			flex-direction: column; 
+			position: absolute; 
+			left: 200px; 
+			top: 40px;
+
+			img {
+				width: 70px;
+			}
+		}
+	}
+}
