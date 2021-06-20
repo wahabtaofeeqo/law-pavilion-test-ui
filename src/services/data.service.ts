@@ -10,7 +10,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 
 export class DataService {
 
-  apiUrl: string = 'http://localhost:3000/';
+  apiUrl: string = 'https://app-fake-server-api.herokuapp.com/';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   private readonly searchTerm = new BehaviorSubject<string>('');

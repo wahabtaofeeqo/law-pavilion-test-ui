@@ -11,7 +11,7 @@ import { User } from '../models/user';
 
 export class LoginService {
 
-  apiUrl: string = 'http://localhost:3000/';
+  apiUrl: string = 'https://app-fake-server-api.herokuapp.com/';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
