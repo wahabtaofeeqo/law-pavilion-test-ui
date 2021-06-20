@@ -1,19 +1,19 @@
-<div class="wrapper" [ngClass]="overlay ? 'overlay' : ''">
+<div class="wrapper bg-light" [ngClass]="overlay ? 'overlay' : ''">
 	<aside>
 		<div class="mb-5 text-center">
-			<a href="#">R</a>
+			<a href="#" style="color: white; text-decoration: none; font-size: 14px;">R</a>
 		</div>
 
 		<ul class="nav flex-column">
 			<li class="nav-item">
-				<a [routerLink]="['/dashboard']" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+				<a [routerLink]="['/dashboard']" (click)="goto('dashboard')" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
 					<i class="fa fa-users" aria-hidden="true"></i>
 					<span class="px-2">Patient List</span>
 				</a>
 			</li>
 
 			<li class="nav-item">
-				<a class="nav-link" routerLink="add" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+				<a class="nav-link" routerLink="add" (click)="goto('add')" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
 					<i class="fa fa-user"></i>
 					<span class="px-2">Register Patient</span>
 				</a>
@@ -30,7 +30,7 @@
 				</p>
 
 				<li class="nav-item">
-					<a href="#" class="nav-link active">
+					<a href="#" class="nav-link active" (click)="logout()">
 						<i class="fa fa-power-off" aria-hidden="true"></i>
 						<span class="px-3">Logout</span>
 					</a>
@@ -45,27 +45,27 @@
 				<a class="menu px-3 d-inline-block d-md-none" (click)="toggle()" href="#">
 					<i class="fa fa-bars" style="font-size: 24px;" aria-hidden="true"></i>
 				</a>
-				<div class="px-2 d-sm-none d-md-inline-block">
-					<input class="form-control" type="search" placeholder="Search" aria-label="Search">
-					<i class="fa fa-search"></i>
+
+				<div *ngIf="page == 'dashboard'" class="px-2 d-sm-none d-md-inline-block">
+					<input class="form-control" type="search" placeholder="Search for Patient Name" aria-label="Search" #input>
+					<i class="fa fa-search" (click)="search(input.value)"></i>
+				</div>
+
+				<div *ngIf="page == 'add'" class="px-2">
+					<h4 class="mb-0">Register Patient</h4>
 				</div>
 				
 				<ul class="nav">
-					<li class="nav-item d-inline-block d-md-none">
-						<a href="#" class="nav-link">
-							<i class="fa fa-search"></i>
+
+					<li class="me-2">
+						<a href="#" class="nav-link box bell">
+							<i class="fa fa-bell"></i>
 						</a>
 					</li>
 
-					<li class="nav-item">
-						<a href="#" class="nav-link box">
-							<!-- <img src="/assets/login.jpg"> -->
-						</a>
-					</li>
-
-					<li class="nav-item">
-						<a href="#" class="nav-link box">
-							<!-- <img src="/assets/login.jpg"> -->
+					<li class="me-2">
+						<a href="#" class="box">
+							<img src="/assets/login.jpg">
 						</a>
 					</li>
 				</ul>

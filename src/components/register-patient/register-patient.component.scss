@@ -1,0 +1,26 @@
+$color: #102352;
+
+.text-color {
+	color: $color
+}
+
+.no-border {
+	border: 0;
+}
+
+.drop-body {
+	background: linear-gradient(136.51deg, #FFFFFF 1.25%, #F0F6FF 96.38%);
+	border-radius: 11.8754px; 
+	border: dotted 1px blue; 
+	text-align: center;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background: white !important;
+}
+
+.position-control {
+	position: absolute; 
+	bottom: 100px; 
+	right: 100px;
+}

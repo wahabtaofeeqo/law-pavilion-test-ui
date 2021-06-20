@@ -1,26 +1,32 @@
 <div class="wrapper h-100">
-	 <mat-horizontal-stepper labelPosition="bottom" linear="true" #stepper class="container h-100">
+	 <mat-horizontal-stepper labelPosition="bottom" linear="true" #stepper class="container h-100 bg-light">
 
         <mat-step [stepControl]="personalDataGroup">
-            <form [formGroup]="personalDataGroup">
+            <form [formGroup]="personalDataGroup" class="bg-light">
             	<ng-template matStepLabel>
             		Personal Details
             	</ng-template>
 		        
 		        <div class="row py-md-4">
-		        	<div class="col-md-3">
+		        	<div class="col-md-3 mb-4">
 		        		<div>
-		        			<p class="text-center">
-		        				Drag and Drop Images here <br> OR
-		        			</p>
-		        			<ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" 
-						    (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+		        			<ngx-file-drop dropZoneLabel="Drag and Drop your picture here" (onFileDrop)="dropped($event)" 
+						    (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)" dropZoneClassName="no-border">
+
 						        <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
-						          	<p>
-						          		<button type="button" class="btn btn-primary shadow-sm" (click)="openFileSelector()">
-						          			Upload Picture
-						          		</button>
-						          	</p>
+						        	<div class="p-3 drop-body">
+						        		 
+						        		<p class="text-color small mt-3">
+						        			Drag and Drop your picture here
+						        			<br>
+						        			OR
+						        		</p>
+						        		<p>
+						        			<button type="button" class="btn btn-primary btn-sm shadow-sm" (click)="openFileSelector()">
+						          				Upload Picture
+						          			</button>
+						        		</p>
+						        	</div>
 						        </ng-template>
 						    </ngx-file-drop>
 		        		</div>
@@ -170,8 +176,8 @@
 		        	</mat-form-field>
 		        </div>
 		         
-		        <div class="container" style="text-align: right;">
-		           <button class="btn py-md-2 btn-light px-5 mx-4" mat-button matStepperPrevious>Back</button>
+		        <div class="container position-control" style="text-align: right;">
+		           <button class="btn py-md-2 btn-white px-5 mx-4" mat-button matStepperPrevious>Back</button>
 		            <button class="btn py-md-2 btn-primary px-5" mat-button matStepperNext>Continue</button>
 		        </div>
             </form>
@@ -208,8 +214,8 @@
 			        </div>
             	</div>
 
-            	<div class="container" style="text-align: right;">
-		           	<button class="btn py-md-2 btn-light px-5 mx-4" mat-button matStepperPrevious>Back</button>
+            	<div class="container position-control" style="text-align: right;">
+		           	<button class="btn py-md-2 btn-white px-5 mx-4" mat-button matStepperPrevious>Back</button>
 		            <button class="btn py-md-2 btn-primary px-5" mat-button matStepperNext>Continue</button>
 		        </div>
             </form>
@@ -227,8 +233,8 @@
 					</select>
 			    </mat-form-field>
 		         
-		        <div class="container" style="text-align: right;">
-		           	<button class="btn py-md-2 btn-light px-5 mx-4" mat-button matStepperPrevious>Back</button>
+		        <div class="container position-control" style="text-align: right;">
+		           	<button class="btn py-md-2 btn-white px-5 mx-4" mat-button matStepperPrevious>Back</button>
 		            <button class="btn py-md-2 btn-primary px-5" mat-button matStepperNext>Continue</button>
 		        </div>
             </form>

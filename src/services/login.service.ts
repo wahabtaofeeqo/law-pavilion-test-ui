@@ -33,4 +33,8 @@ export class LoginService {
     let user = localStorage.getItem("user");
     return (user != null) ? JSON.parse(user) : null;
   }
+
+  logout() {
+    localStorage.removeItem("user");
+  }
 }

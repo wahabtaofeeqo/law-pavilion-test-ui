@@ -13,7 +13,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker'; 
 
-
+import { NgxSpinnerModule } from "ngx-spinner";
 import { NgxFileDropModule } from 'ngx-file-drop';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -49,6 +49,7 @@ import { Step4Component } from '../components/steps/step4/step4.component';
     MatSelectModule,
     MatDatepickerModule,
     NgxFileDropModule,
+    NgxSpinnerModule,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [LoginService, DataService],

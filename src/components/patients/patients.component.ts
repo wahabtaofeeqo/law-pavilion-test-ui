@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DataService } from '../../services/data.service';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-patients',
@@ -13,15 +14,31 @@ export class PatientsComponent implements OnInit {
 
    displayedColumns: string[] = ['Profile', 'Name', 'Gender', 'Age', 'Phone', 'Address', 'Action'];
 
-  constructor(private service: DataService) { }
+  constructor(private service: DataService, private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
-    this.loadUsers();
+    this.loadPatients();
+
+    this.service.getTerm().subscribe(val => {
+      if(val) {
+        this.spinner.show();
+        this.searchPatient(val);
+      }
+    })
   }
 
-  loadUsers() {
-    this.service.fetchUsers().subscribe(users => {
-      this.dataSource = users;
+  loadPatients() {
+    this.service.fetchPatients().subscribe(patients => {
+      this.dataSource = patients;
+    })
+  }
+
+  public searchPatient(name: string) {
+    this.service.searchPatient(name).subscribe(response => {
+      setTimeout(() => {
+          this.dataSource = response;
+          this.spinner.hide();
+      }, 5000);
     })
   }
 }
