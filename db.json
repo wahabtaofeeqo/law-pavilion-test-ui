@@ -10,6 +10,17 @@
       "address": "4517 Washington Ave...",
       "profile": "user.png"
     },
+
+    {
+      "id": 2,
+      "name": "John Doe",
+      "gender": "male",
+      "phone": "+234 (0) 813409858",
+      "email": "admin@yahoo.com",
+      "password": "admin",
+      "address": "4517 Washington Ave...",
+      "profile": "user.png"
+    }
   ],
   "patients": [
     {

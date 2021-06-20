@@ -1,4 +1,4 @@
-<div class="h-100 container-fluid p-4">
+<div class="h-100 container-fluid p-4" style="overflow-x: auto;">
 
 	<!-- Loading Indicator -->
 	<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
@@ -7,7 +7,7 @@
 		Patient List
 	</h2>
 
-	<table mat-table [dataSource]="dataSource" class="mat-elevation-z4 w-100">
+	<table mat-table [dataSource]="dataSource" class="mat-elevation-z2 w-100">
 
 		<ng-container matColumnDef="Profile">
 			<th mat-header-cell *matHeaderCellDef></th>
